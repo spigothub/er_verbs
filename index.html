@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Clickable Audio Words</title>
+  <title>-er Verbs with Audio</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 800px; margin: auto; }
+    .card { display: flex; flex-direction: column; align-items: center; }
+    .word { color: blue; text-decoration: underline; cursor: pointer; }
+    img { width: 100px; height: auto; }
+  </style>
 </head>
 <body>
-  <h1>Click a word to hear it</h1>
 
-  <p>
-    <button onclick="document.getElementById('audio1').play()">Chanter</button>
-    <audio id="audio1" src="chanter.mp3"></audio>
-  </p>
-
-  <p>
-    <button onclick="document.getElementById('audio2').play()">Danser</button>
-    <audio id="audio2" src="danser.mp3"></audio>
-  </p>
+  <h2>-er Verbs</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="chanter.png" alt="chanter">
+      <div class="word" onclick="document.getElementById('chanter-audio').play()">chanter</div>
+      <audio id="chanter-audio" src="chanter.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="danser.png" alt="danser">
+      <div class="word" onclick="document.getElementById('danser-audio').play()">danser</div>
+      <audio id="danser-audio" src="danser.mp3"></audio>
+    </div>
+    <div class="card">
+      <img src="diner.png" alt="dîner">
+      <div class="word" onclick="document.getElementById('diner-audio').play()">dîner</div>
+      <audio id="diner-audio" src="diner.mp3"></audio>
+    </div>
+    <!-- Repeat structure for other verbs -->
+  </div>
 
 </body>
 </html>
